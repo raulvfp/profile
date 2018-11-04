@@ -34,15 +34,12 @@ git clone https://github.com/raulvfp/profile.git profile
 	_Lee el contenido de un archivo Profile (cFileName) y lo carga en un objeto._
     
 - [**save**](#save)()
-
 	_Guarda las modificaciones en disco._
     
 - [**saveTo**](#saveto)(cNewFile AS CHARACTER)
-
 	_Guarda los datos en un nuevo archivo Profile(cFileName)._
     
 - [**setValue**](#setvalue)(cSection AS CHARACTER, cKey AS CHARACTER, eValue)
-
 	_Asigna un valor (eValue) en una clave (cKey) de una seccón (cSection) determinada._
 
 ## Usage:
@@ -50,6 +47,7 @@ git clone https://github.com/raulvfp/profile.git profile
     + **Parameters**:
 
     	. cSection: _La Seccion en donde se buscara la clave a borrar_.
+	
     	. cKey: _La Clave que se busca borrar._
         
     + **Return Value**: Si tuvo exito una Cadena de Caracteres con la clave y su valor, de lo contrario _.null._.
@@ -66,7 +64,9 @@ git clone https://github.com/raulvfp/profile.git profile
 
 - #getValue
 	+ **Parameters**:
+	
 		. cSection: _Es la sección en donde se buscará la clave._
+		
 		. cKey: _Es la clave a buscar._
 
 	+ **Return Value**: Si existe, devuelve una cadena, de lo contrario _.null._.
