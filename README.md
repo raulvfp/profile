@@ -52,7 +52,7 @@ git clone https://github.com/raulvfp/profile.git profile
 	_Asigna un valor (eValue) en una clave (cKey) de una seccón (cSection) determinada._
 
 ## Usage:
-- Delete
+- **.delete()**
     + **Parameters**:
 
 		. cSection: _La Seccion en donde se buscara la clave a borrar_.
@@ -61,7 +61,7 @@ git clone https://github.com/raulvfp/profile.git profile
         
     + **Return Value**: Si tuvo exito una Cadena de Caracteres con la clave y su valor, de lo contrario _.null._.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -72,7 +72,7 @@ git clone https://github.com/raulvfp/profile.git profile
 ```
 
 
-- getValue
+- **.getValue()**
 	+ **Parameters**:
 	
 		. cSection: _Es la sección en donde se buscará la clave._
@@ -81,7 +81,7 @@ git clone https://github.com/raulvfp/profile.git profile
 
 	+ **Return Value**: Si existe, devuelve una cadena, de lo contrario _.null._.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -91,14 +91,14 @@ git clone https://github.com/raulvfp/profile.git profile
 ```
 
 
-- Read
+- **.Read()**
     + **Parameters**: 
     
     	. cFileName: _Es el Nombre del Archivo a Leer._
         
     + **Return Value**: Si tuvo exito True, de lo contrario False.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -108,12 +108,12 @@ git clone https://github.com/raulvfp/profile.git profile
 ```
 
 
-- Save
+- **.Save()**
     + **Parameters**:
         
     + **Return Value**: Si tuvo exito True, de lo contrario False.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -124,14 +124,14 @@ git clone https://github.com/raulvfp/profile.git profile
 ```
 
 
-- SaveTo
+- **.SaveTo()**
     + **Parameters**:
     
     	. cFileName: _El nombre del nuevo archivo Profile._
         
     + **Return Value**: Si tuvo exito True, de lo contrario False.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -142,7 +142,7 @@ git clone https://github.com/raulvfp/profile.git profile
 ```
 
 
-- SetValue
+- **.SetValue()**
 	+ **Parameters**:
 	
 		. cSection : _Es la sección en donde se agrega la clave._
@@ -153,7 +153,7 @@ git clone https://github.com/raulvfp/profile.git profile
 
 	+ **Return Value**: Si tuvo exito True, de lo contrario False
 
-	  **Example:**
+	  *Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
