@@ -193,4 +193,168 @@
 		<userid>Raul Juare</userid>
 		<setting>THIS.nSplitterPosition = 226</setting>
 	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.Top = 125</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.Left = 273</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.Height = IIF(VERSION(5)&gt;=900,480,480)</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.Width = IIF(VERSION(5)&gt;=900,803,803)</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.inZoomTop = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.inZoomLeft = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.inZoomHeight = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.inZoomWidth = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.inZoomWindowState = 0</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.ActivePage = 2</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.grdTests.FontName = "Tahoma"</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.grdTests.FontSize = 9</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.grdTests.FontBold = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.grdTests.FontItalic = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgFailuresAndErrors.FontName = "Arial"</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgFailuresAndErrors.FontSize = 9</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgFailuresAndErrors.FontBold = .T.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgFailuresAndErrors.FontItalic = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgFailuresAndErrors.edtFailuresAndErrors.FontName = "Courier New"</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgFailuresAndErrors.edtFailuresAndErrors.FontSize = 9</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgFailuresAndErrors.edtFailuresAndErrors.FontBold = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgFailuresAndErrors.edtFailuresAndErrors.FontItalic = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgMessages.FontName = "Arial"</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgMessages.FontSize = 9</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgMessages.FontBold = .T.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgMessages.FontItalic = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgMessages.edtMessages.FontName = "Courier New"</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgMessages.edtMessages.FontSize = 9</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgMessages.edtMessages.FontBold = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.pgfDetails.pgMessages.edtMessages.FontItalic = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.ilLargeGrid=.F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.grdTests.COLUMN1.Width = 208</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.grdTests.COLUMN2.Width = 550</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>SET ORDER TO TAG TCLOC IN (THIS.icGridRS)</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>=SEEK("TEST_PROFILE                                                                                                  TESTEXISTEOBJECTO                                                                                                                 ",THIS.icGridRS,"TCLName")</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.ilAllowDebug = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.ShowTips = .T.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.ilHonorTestPrefix = .T.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.ilReloadTestsOnRun = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.ilCloseDebuggerAtEndOfTestsRun = .F.</setting>
+	</foxunitpersist>
+	<foxunitpersist>
+		<userid>Raul Juare</userid>
+		<setting>THIS.nSplitterPosition = 226</setting>
+	</foxunitpersist>
 </VFPData>
