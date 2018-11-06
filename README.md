@@ -2,7 +2,8 @@
 
 * support: raul.jrz@gmail.com
 * url: [http://rauljrz.github.io/](http://rauljrz.github.io)
-* Comentarios en http://rinconfox.com
+* comment in http://rinconfox.com
+* freelancer in http://pph.me/rauljrz
 
 **Do you like this project? Support it by donating**
 
