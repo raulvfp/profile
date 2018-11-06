@@ -2,9 +2,14 @@
 
 * support: raul.jrz@gmail.com
 * url: [http://rauljrz.github.io/](http://rauljrz.github.io)
-* Comentarios en http://rinconfox.com
+* comment in http://rinconfox.com
+* freelancer in http://pph.me/rauljrz
 
-[TOC]
+**Do you like this project? Support it by donating**
+
+- <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/rauljrz"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+- ![Paypal](https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/paypal.png) Paypal: [Si te sirvio, invitame un café o una cerveza](https://www.paypal.me/rauljrz)
+- ![btc](https://camo.githubusercontent.com/4bc31b03fc4026aa2f14e09c25c09b81e06d5e71/687474703a2f2f7777772e6d6f6e747265616c626974636f696e2e636f6d2f696d672f66617669636f6e2e69636f) Bitcoin:
 
 ## Dependencies
 https://github.com/raulvfp/catchException
@@ -24,32 +29,40 @@ git clone https://github.com/raulvfp/profile.git profile
 ## Main Methods:
 
 - [**delete**](#delete)(cSection AS CHARACTER, cKey AS CHARACTER)
+
 	_Elimina un Clave (cKey) de una Sección (cSection) determinada._
     
 - [**getValue**](#getvalue)(cSection AS CHARACTER, cKey AS CHARACTER)
-    _Devuelve el valor de una Clave (cKey) de una Seccón (cSection) determinada._
+
+	_Devuelve el valor de una Clave (cKey) de una Seccón (cSection) determinada._
     
 - [**read**](#read)(cFileName AS CHARACTER)
+
 	_Lee el contenido de un archivo Profile (cFileName) y lo carga en un objeto._
     
 - [**save**](#save)()
+
 	_Guarda las modificaciones en disco._
     
 - [**saveTo**](#saveto)(cNewFile AS CHARACTER)
+
 	_Guarda los datos en un nuevo archivo Profile(cFileName)._
     
 - [**setValue**](#setvalue)(cSection AS CHARACTER, cKey AS CHARACTER, eValue)
+
 	_Asigna un valor (eValue) en una clave (cKey) de una seccón (cSection) determinada._
 
 ## Usage:
-- ###Delete
+- **.delete()**
     + **Parameters**:
-    	. cSection: _La Seccion en donde se buscara la clave a borrar_.
-    	. cKey: _La Clave que se busca borrar._
+
+		. cSection: _La Seccion en donde se buscara la clave a borrar_.
+	
+		. cKey: _La Clave que se busca borrar._
         
     + **Return Value**: Si tuvo exito una Cadena de Caracteres con la clave y su valor, de lo contrario _.null._.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -59,14 +72,17 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
-- ###getValue
+
+- **.getValue()**
 	+ **Parameters**:
+	
 		. cSection: _Es la sección en donde se buscará la clave._
+		
 		. cKey: _Es la clave a buscar._
 
 	+ **Return Value**: Si existe, devuelve una cadena, de lo contrario _.null._.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -75,13 +91,15 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
-- ###Read
+
+- **.Read()**
     + **Parameters**: 
+    
     	. cFileName: _Es el Nombre del Archivo a Leer._
         
     + **Return Value**: Si tuvo exito True, de lo contrario False.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -90,12 +108,13 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
-- ###Save
+
+- **.Save()**
     + **Parameters**:
         
     + **Return Value**: Si tuvo exito True, de lo contrario False.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -105,13 +124,15 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
-- ###SaveTo
+
+- **.SaveTo()**
     + **Parameters**:
+    
     	. cFileName: _El nombre del nuevo archivo Profile._
         
     + **Return Value**: Si tuvo exito True, de lo contrario False.
 
-	**Example:**
+	*Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -122,15 +143,18 @@ git clone https://github.com/raulvfp/profile.git profile
 ```
 
 
-- ###SetValue
+- **.SetValue()**
 	+ **Parameters**:
+	
 		. cSection : _Es la sección en donde se agrega la clave._
+		
 		. cKey     : _Es la clave._
+		
 		. eValue   : _El valor que se le cargarrá a la clave._
 
 	+ **Return Value**: Si tuvo exito True, de lo contrario False
 
-	  **Example:**
+	  *Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -140,4 +164,13 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
+
 http://rinconfox.com
+
+---
+
+**Do you like this project? Support it by donating**
+
+- <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/rauljrz"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+- ![Paypal](https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/paypal.png) Paypal: [Si te sirvio, invitame un café o una cerveza](https://www.paypal.me/rauljrz)
+- ![btc](https://camo.githubusercontent.com/4bc31b03fc4026aa2f14e09c25c09b81e06d5e71/687474703a2f2f7777772e6d6f6e747265616c626974636f696e2e636f6d2f696d672f66617669636f6e2e69636f) Bitcoin:

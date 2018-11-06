@@ -3,13 +3,31 @@
 *| profile
 *|--------------------------------------------------------------------------
 *|
-*| Archivo principal del sistema
-*| Author......: Raul Jrz (raul.jrz@gmail.com) 
+*| Clase para administrar el contenido de una archivo profile (.ini)
+*| Author......: Raul Jrz (raul.jrz@gmail.com)
+*|               Freelancer in http://pph.me/rauljrz
 *| Created.....: 2018.10.26 - 15.50
 *| Purpose.....: ini file manager
+*| Web site....: http://rauljrz.github.io
 *|
+*| Support by..: http://rinconfox.com
+*| 
 *| Revisions...: v1.00
 *|
+*|----------------------------------------------------------------------------
+*| Do you like this project? Support it by donating
+*|  - Buy me a coffee or Beer - 
+*|    https://www.buymeacoffee.com/rauljrz
+*|    https://www.paypal.me/rauljrz
+*|----------------------------------------------------------------------------
+*| LICENSE:
+*|----------------------------------------------------------------------------
+*| "THE BEER-WARE LICENSE" (Revision 42):
+*| <raul.jrz@gmail.com> wrote this file. As long as you retain this notice you
+*| can do whatever you want with this stuff. If we meet some day, and you think
+*| this stuff is worth it, you can buy me a beer in return or a Virtual Coffee
+*| in https://www.buymeacoffee.com/rauljrz
+*|----------------------------------------------------------------------------
 */
 *-----------------------------------------------------------------------------------*
 DEFINE CLASS profile AS Custom
@@ -26,6 +44,16 @@ DEFINE CLASS profile AS Custom
 	PROTECTED oContent
 	oContent = null
 	
+	*----------------------------------------------------------------------------*
+	FUNCTION catchException()
+	* Control de las excepciones/errores
+	*----------------------------------------------------------------------------*
+		IF RIGHT(SYS(16,0),4) = ".EXE" THEN
+			NEWOBJECT('catchException','catchException.prg','', THIS.bRelanzarThrow)
+		ELSE
+			CREATEOBJECT('catchException', THIS.bRelanzarThrow)
+		ENDIF
+	ENDFUNC
 	*
 	*----------------------------------------------------------------------------*
 	FUNCTION isError()
@@ -62,25 +90,29 @@ DEFINE CLASS profile AS Custom
 		LOCAL leReturn
 		leReturn = null
 		
-		tcSection = THIS.formatProperty(tcSection)
-		loSection = THIS.checkExist(THIS.oContent, tcSection)
-		IF !ISNULL(loSection) THEN
-			*- Existe la sección
-			IF PCOUNT()=1 AND VARTYPE(tckey)#'C' THEN
-				*- Borro toda la sección
-				leReturn = tcSection
-				REMOVEPROPERTY(THIS.oContent, tcSection)
-			ELSE
-				*- Borro una clave
-				tckey = THIS.formatProperty(tckey)			
-				leKey = THIS.checkExist(loSection, tckey)
-				IF !ISNULL(leKey) THEN
-					*- Existe y borro la clave
-					leReturn = tcKey + ' = '+leKey
-					REMOVEPROPERTY(loSection, tcKey)
+		TRY
+			tcSection = THIS.formatProperty(tcSection)
+			loSection = THIS.checkExist(THIS.oContent, tcSection)
+			IF !ISNULL(loSection) THEN
+				*- Existe la sección
+				IF PCOUNT()=1 AND VARTYPE(tckey)#'C' THEN
+					*- Borro toda la sección
+					leReturn = tcSection
+					REMOVEPROPERTY(THIS.oContent, tcSection)
+				ELSE
+					*- Borro una clave
+					tckey = THIS.formatProperty(tckey)			
+					leKey = THIS.checkExist(loSection, tckey)
+					IF !ISNULL(leKey) THEN
+						*- Existe y borro la clave
+						leReturn = tcKey + ' = '+leKey
+						REMOVEPROPERTY(loSection, tcKey)
+					ENDIF
 				ENDIF
 			ENDIF
-		ENDIF
+		CATCH TO loEx
+			THIS.catchException()
+		ENDTRY
 		RETURN leReturn
 	ENDFUNC
 	*
@@ -120,6 +152,11 @@ DEFINE CLASS profile AS Custom
 				
 				IF '['$lcLine THEN                                            &&Es un título de sección
 					lcSection = THIS.formatProperty(lcLine)                   &&Si tiene corchetes los quito
+					IF LEN(lcSection)!=LEN(CHRTRAN(lcSection,'¬|°/!"#$%()=?¡¿´+¨*}][{-.:,;^`~\','')) THEN
+						lcSection = ''
+						LOOP
+					ENDIF
+
 					THIS.pushSection(lcSection)                               &&Creo la nueva sección
 				ELSE
 					IF !EMPTY(lcSection) THEN                                 &&No es un título ni comentario, puede ser una clave
@@ -133,7 +170,7 @@ DEFINE CLASS profile AS Custom
 
 		CATCH TO loEx
 			THIS.msgError = loEx.Message
-			oTmp = CREATEOBJECT('catchException',THIS.bRelanzarThrow)
+			THIS.catchException()
 		ENDTRY
 		RETURN THIS.isSuccess()  
 	ENDFUNC
@@ -154,33 +191,38 @@ DEFINE CLASS profile AS Custom
 		lcContent = ''                &&Es el contenido del nuevo archivo ini de salida
 		loContent = THIS.oContent
 		
-		IF FILE(tcNewFile) THEN
-			COPY FILE (tcNewFile) TO (FORCEEXT(tcNewFile, 'bak'))
-		ENDIF
-		
-		IF VARTYPE(loContent)='O' THEN
-			FOR lnInd=1 TO AMEMBERS(laContent, loContent)
-				lcSection = laContent[lnInd]
-				
-				loSection = loContent.&lcSection
-				
-				FOR lnJnd=1 TO AMEMBERS(laSection, loSection)
-					IF lnJnd=1 THEN &&Pongo el titulo de la section
-						lcContent = lcContent + '['+PROPER(CHRTRAN(lcSection,'_',' '))+']'+LFCR
-					ENDIF
+		TRY
+			IF FILE(tcNewFile) THEN
+				COPY FILE (tcNewFile) TO (FORCEEXT(tcNewFile, 'bak'))
+			ENDIF
+			
+			IF VARTYPE(loContent)='O' THEN
+				FOR lnInd=1 TO AMEMBERS(laContent, loContent)
+					lcSection = laContent[lnInd]
 					
-					lcKey = laSection[lnJnd]
-					loKey = loSection.&lcKey
-					lcContent = lcContent +;
-								PROPER(CHRTRAN(lcKey,'_',' ')) +' = '+ loSection.&lcKey +LFCR
+					loSection = loContent.&lcSection
+					
+					FOR lnJnd=1 TO AMEMBERS(laSection, loSection)
+						IF lnJnd=1 THEN &&Pongo el titulo de la section
+							lcContent = lcContent + '['+PROPER(CHRTRAN(lcSection,'_',' '))+']'+LFCR
+						ENDIF
+						
+						lcKey = laSection[lnJnd]
+						loKey = loSection.&lcKey
+						lcContent = lcContent +;
+									PROPER(CHRTRAN(lcKey,'_',' ')) +' = '+ loSection.&lcKey +LFCR
+					ENDFOR
+					lcContent = lcContent +LFCR 
 				ENDFOR
-				lcContent = lcContent +LFCR 
-			ENDFOR
-		ENDIF
+			ENDIF
+			
+			IF !EMPTY(lcContent) THEN
+				STRTOFILE(lcContent, tcNewFile)
+			ENDIF
 		
-		IF !EMPTY(lcContent) THEN
-			STRTOFILE(lcContent, tcNewFile)
-		ENDIF
+		CATCH TO loEx
+			THIS.catchException()
+		ENDTRY
 		RETURN THIS.isSuccess()
 	ENDFUNC
 	*
@@ -205,9 +247,10 @@ DEFINE CLASS profile AS Custom
 			ENDIF
 				
 			loSection.&tcKey = teValue
+
 		CATCH TO loEx
 			THIS.msgError = loEx.Message
-			oTmp = CREATEOBJECT('catchException',THIS.bRelanzarThrow)
+			THIS.catchException()
 		ENDTRY
 		RETURN THIS.isSuccess()
   	ENDFUNC
@@ -257,7 +300,7 @@ DEFINE CLASS profile AS Custom
 	*----------------------------------------------------------------------------*
 		RETURN LOWER(STRTRAN(ALLTRIM(CHRTRAN(TRANSFORM(teProperty),'[]',' ')),' ','_'))
 	ENDFUNC
-	*
+	* 
 	*----------------------------------------------------------------------------*
 	PROTECTED FUNCTION pushSection(tcNewSection)
 	* Agrega una nueva section si no existe
@@ -270,7 +313,7 @@ DEFINE CLASS profile AS Custom
 				ADDPROPERTY(THIS.oContent, tcNewSection, CREATEOBJECT('EMPTY'))
 			ENDIF
 		CATCH TO loEx
-			oTmp = CREATEOBJECT('catchException',THIS.bRelanzarThrow)
+			THIS.catchException()
 		ENDTRY
 	ENDFUNC
 	*
