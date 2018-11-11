@@ -39,7 +39,7 @@ git clone https://github.com/raulvfp/profile.git profile
 
 ## Main methods
 
-- [**delete**](#delete())(cSection AS CHARACTER, cKey AS CHARACTER)
+- [**delete**](#delete)(cSection AS CHARACTER, cKey AS CHARACTER)
 
 	_Elimina un Clave (cKey) de una Sección (cSection) determinada._
     
@@ -89,7 +89,7 @@ git clone https://github.com/raulvfp/profile.git profile
 **[⬆ back to top](#table-of-contents)**
 
 
-- **.getValue()**
+   ### **.getValue()**
 	+ **Parameters**:
 	
 		. cSection: _Es la sección en donde se buscará la clave._
