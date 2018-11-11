@@ -11,6 +11,14 @@
 - ![Paypal](https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/paypal.png) Paypal: [Si te sirvio, invitame un café o una cerveza](https://www.paypal.me/rauljrz)
 - ![btc](https://camo.githubusercontent.com/4bc31b03fc4026aa2f14e09c25c09b81e06d5e71/687474703a2f2f7777772e6d6f6e747265616c626974636f696e2e636f6d2f696d672f66617669636f6e2e69636f) Bitcoin:
 
+## Table of contents
+* [Dependencies](#dependencies)
+* [Installation](#installation)
+* [Auxiliary Methods](#auxiliary_methods)
+* [Main Methods](#main_methods)
+* [How to use](#how-to-use)
+
+    
 ## Dependencies
 https://github.com/raulvfp/catchException
     Para el control de las excepciones.
@@ -20,15 +28,15 @@ https://github.com/raulvfp/catchException
 git clone https://github.com/raulvfp/profile.git profile
 ```
 
-## Auxiliary methods:
+## Auxiliary methods
 - isSuccess()  : Devuelve .T. si tuvo exito la última operación, de lo contrario .F.
 - isError()    : Devuelve .T. si tuvo error la última operación, de lo contrario .F.
 - getMsgError(): Si la última operación dio error, contiene el Mensaje de Error, de lo contrario .null.
 - getFileName(): Devuelve el nombre del archivo profile con el cual se esta trabajando.
 
-## Main Methods:
+## Main Methods
 
-- [**delete**](#delete)(cSection AS CHARACTER, cKey AS CHARACTER)
+- [**delete**](#.delete)(cSection AS CHARACTER, cKey AS CHARACTER)
 
 	_Elimina un Clave (cKey) de una Sección (cSection) determinada._
     
@@ -53,7 +61,7 @@ git clone https://github.com/raulvfp/profile.git profile
 	_Asigna un valor (eValue) en una clave (cKey) de una seccón (cSection) determinada._
 
 ## Usage:
-- **.delete()**
+- **.delete**
     + **Parameters**:
 
 		. cSection: _La Seccion en donde se buscara la clave a borrar_.
@@ -72,6 +80,7 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
+**[⬆ back to top](#table-of-contents)**
 
 - **.getValue()**
 	+ **Parameters**:
@@ -91,6 +100,7 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
+**[⬆ back to top](#table-of-contents)**
 
 - **.Read()**
     + **Parameters**: 
@@ -108,6 +118,8 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 
 - **.Save()**
     + **Parameters**:
@@ -124,6 +136,7 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
+**[⬆ back to top](#table-of-contents)**
 
 - **.SaveTo()**
     + **Parameters**:
@@ -142,6 +155,7 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
+**[⬆ back to top](#table-of-contents)**
 
 - **.SetValue()**
 	+ **Parameters**:
@@ -163,6 +177,8 @@ git clone https://github.com/raulvfp/profile.git profile
         		MESSAGE 'Error, no se pudo asignar el valor a la clave'
 	ENDIF
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 
 http://rinconfox.com
