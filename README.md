@@ -68,15 +68,15 @@ git clone https://github.com/raulvfp/profile.git profile
 
 ## Usage:
    ### **.delete()**
-    + **Parameters**:
-
-		. cSection: _La Seccion en donde se buscara la clave a borrar_.
+   + **Parameters**:
+   
+	. cSection: La Seccion en donde se buscara la clave a borrar.
 	
-		. cKey: _La Clave que se busca borrar._
+	. cKey: La Clave que se busca borrar.
         
-    + **Return Value**: Si tuvo exito una Cadena de Caracteres con la clave y su valor, de lo contrario _.null._.
+   + **Return Value**: Si tuvo exito una Cadena de Caracteres con la clave y su valor, de lo contrario _.null._.
 
-	*Example:*
+   *Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -90,15 +90,15 @@ git clone https://github.com/raulvfp/profile.git profile
 
 
    ### **.getValue()**
-	+ **Parameters**:
+   + **Parameters**:
 	
-		. cSection: _Es la sección en donde se buscará la clave._
+	. cSection: Es la sección en donde se buscará la clave.
 		
-		. cKey: _Es la clave a buscar._
+	. cKey: Es la clave a buscar.
 
-	+ **Return Value**: Si existe, devuelve una cadena, de lo contrario _.null._.
+   +  **Return Value**: Si existe, devuelve una cadena, de lo contrario _.null._.
 
-	*Example:*
+   *Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -109,14 +109,14 @@ git clone https://github.com/raulvfp/profile.git profile
 
 **[⬆ back to top](#table-of-contents)**
 
-- **.Read()**
-    + **Parameters**: 
+   ### **.Read()**
+   + **Parameters**: 
     
-    	. cFileName: _Es el Nombre del Archivo a Leer._
+    	. cFileName: Es el Nombre del Archivo a Leer.
         
-    + **Return Value**: Si tuvo exito True, de lo contrario False.
+   + **Return Value**: Si tuvo exito True, de lo contrario False.
 
-	*Example:*
+   *Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -128,12 +128,12 @@ git clone https://github.com/raulvfp/profile.git profile
 **[⬆ back to top](#table-of-contents)**
 
 
-- **.Save()**
-    + **Parameters**:
+   ### **.Save()**
+   + **Parameters**:
         
-    + **Return Value**: Si tuvo exito True, de lo contrario False.
+   + **Return Value**: Si tuvo exito True, de lo contrario False.
 
-	*Example:*
+   *Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -145,14 +145,14 @@ git clone https://github.com/raulvfp/profile.git profile
 
 **[⬆ back to top](#table-of-contents)**
 
-- **.SaveTo()**
-    + **Parameters**:
+   ### **.SaveTo()**
+   + **Parameters**:
     
-    	. cFileName: _El nombre del nuevo archivo Profile._
+    	. cFileName: El nombre del nuevo archivo Profile.
         
-    + **Return Value**: Si tuvo exito True, de lo contrario False.
+   + **Return Value**: Si tuvo exito True, de lo contrario False.
 
-	*Example:*
+   *Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
@@ -164,18 +164,18 @@ git clone https://github.com/raulvfp/profile.git profile
 
 **[⬆ back to top](#table-of-contents)**
 
-- **.SetValue()**
-	+ **Parameters**:
+   ### **.SetValue()**
+   + **Parameters**:
 	
-		. cSection : _Es la sección en donde se agrega la clave._
+	. cSection : Es la sección en donde se agrega la clave.
 		
-		. cKey     : _Es la clave._
+	. cKey     : Es la clave.
 		
-		. eValue   : _El valor que se le cargarrá a la clave._
+	. eValue   : El valor que se le cargarrá a la clave.
 
-	+ **Return Value**: Si tuvo exito True, de lo contrario False
+   + **Return Value**: Si tuvo exito True, de lo contrario False
 
-	  *Example:*
+   *Example:*
 
 ```
 	loProfile = CREATEOBJECT('profile')
