@@ -70,14 +70,13 @@ git clone https://github.com/raulvfp/profile.git profile
    ### **.delete()**
    + **Parameters**:
    
-	. cSection: La Seccion en donde se buscara la clave a borrar.
+    	. cSection: La Seccion en donde se buscara la clave a borrar.
 	
-	. cKey: La Clave que se busca borrar.
+    	. cKey: La Clave que se busca borrar.
         
    + **Return Value**: Si tuvo exito una Cadena de Caracteres con la clave y su valor, de lo contrario _.null._.
 
-   *Example:*
-
+   *Example:* 
 ```
 	loProfile = CREATEOBJECT('profile')
 	IF loProfile.Read('config.ini') THEN
@@ -92,9 +91,9 @@ git clone https://github.com/raulvfp/profile.git profile
    ### **.getValue()**
    + **Parameters**:
 	
-	. cSection: Es la sección en donde se buscará la clave.
+    	. cSection: Es la sección en donde se buscará la clave.
 		
-	. cKey: Es la clave a buscar.
+    	. cKey: Es la clave a buscar.
 
    +  **Return Value**: Si existe, devuelve una cadena, de lo contrario _.null._.
 
@@ -167,16 +166,15 @@ git clone https://github.com/raulvfp/profile.git profile
    ### **.SetValue()**
    + **Parameters**:
 	
-	. cSection : Es la sección en donde se agrega la clave.
+    	. cSection : Es la sección en donde se agrega la clave.
 		
-	. cKey     : Es la clave.
+    	. cKey     : Es la clave.
 		
-	. eValue   : El valor que se le cargarrá a la clave.
+    	. eValue   : El valor que se le cargarrá a la clave.
 
    + **Return Value**: Si tuvo exito True, de lo contrario False
 
    *Example:*
-
 ```
 	loProfile = CREATEOBJECT('profile')
 	IF loProfile.Read('config.ini') THEN
