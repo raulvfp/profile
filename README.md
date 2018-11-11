@@ -14,8 +14,8 @@
 ## Table of contents
 * [Dependencies](#dependencies)
 * [Installation](#installation)
-* [Auxiliary Methods](#auxiliary_methods)
-* [Main Methods](#main_methods)
+* [Auxiliary Methods](#auxiliary-methods)
+* [Main Methods](#main-methods)
 * [How to use](#how-to-use)
 
     
@@ -34,7 +34,7 @@ git clone https://github.com/raulvfp/profile.git profile
 - getMsgError(): Si la última operación dio error, contiene el Mensaje de Error, de lo contrario .null.
 - getFileName(): Devuelve el nombre del archivo profile con el cual se esta trabajando.
 
-## Main Methods
+## Main methods
 
 - [**delete**](#.delete)(cSection AS CHARACTER, cKey AS CHARACTER)
 
@@ -61,7 +61,7 @@ git clone https://github.com/raulvfp/profile.git profile
 	_Asigna un valor (eValue) en una clave (cKey) de una seccón (cSection) determinada._
 
 ## Usage:
-- **.delete**
+   ### **.delete**
     + **Parameters**:
 
 		. cSection: _La Seccion en donde se buscara la clave a borrar_.
