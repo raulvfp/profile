@@ -34,9 +34,12 @@ git clone https://github.com/raulvfp/profile.git profile
 - getMsgError(): Si la última operación dio error, contiene el Mensaje de Error, de lo contrario .null.
 - getFileName(): Devuelve el nombre del archivo profile con el cual se esta trabajando.
 
+**[⬆ back to top](#table-of-contents)**
+
+
 ## Main methods
 
-- [**delete**](#.delete)(cSection AS CHARACTER, cKey AS CHARACTER)
+- [**delete**](#delete())(cSection AS CHARACTER, cKey AS CHARACTER)
 
 	_Elimina un Clave (cKey) de una Sección (cSection) determinada._
     
@@ -59,9 +62,12 @@ git clone https://github.com/raulvfp/profile.git profile
 - [**setValue**](#setvalue)(cSection AS CHARACTER, cKey AS CHARACTER, eValue)
 
 	_Asigna un valor (eValue) en una clave (cKey) de una seccón (cSection) determinada._
+	
+**[⬆ back to top](#table-of-contents)**
+
 
 ## Usage:
-   ### **.delete**
+   ### **.delete()**
     + **Parameters**:
 
 		. cSection: _La Seccion en donde se buscara la clave a borrar_.
@@ -81,6 +87,7 @@ git clone https://github.com/raulvfp/profile.git profile
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
 
 - **.getValue()**
 	+ **Parameters**:
