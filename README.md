@@ -12,21 +12,37 @@
 - ![btc](https://camo.githubusercontent.com/4bc31b03fc4026aa2f14e09c25c09b81e06d5e71/687474703a2f2f7777772e6d6f6e747265616c626974636f696e2e636f6d2f696d672f66617669636f6e2e69636f) Bitcoin:
 
 ## Table of contents
+* [Introduction](#introduction)
+* [How to use](#how-to-use)
 * [Dependencies](#dependencies)
 * [Installation](#installation)
 * [Auxiliary Methods](#auxiliary-methods)
 * [Main Methods](#main-methods)
-* [How to use](#how-to-use)
+* [Author](#author)
+* [License](#license)
 
-    
+## Introduction
+Esta clase tiene por objeto manejar los archivos de configuración *.ini* comumente usado en windows. Tiene la capacidad de crear un archivo, leer, modificar el contenido de una clave y de grabar las modificaciones. 
+
+
+## How to use
+Para hacer uso de la clase, esta debe ser instanciada. Una vez instanciado, para leer el contenido de un archivo existente, debes usar el metodo `.read("nombrearchivo.ini")`.
+
+Para recuperar una clave de una determinada sección usar el metodo `.getValue("Data Store","BackEnd")`.
+
+Para grabar el metodo es, `.save()`. Y para grabar en un nuevo archivo el método  `.saveTo("nuevoArchivo.ini")`. 
+
+
 ## Dependencies
-https://github.com/raulvfp/catchException
-    Para el control de las excepciones.
+https://github.com/raulvfp/catchException  Para el control de las excepciones.
+
 
 ## Installation
 ```
 git clone https://github.com/raulvfp/profile.git profile
 ```
+
+
 
 ## Auxiliary methods
 - isSuccess()  : Devuelve .T. si tuvo exito la última operación, de lo contrario .F.
@@ -34,7 +50,9 @@ git clone https://github.com/raulvfp/profile.git profile
 - getMsgError(): Si la última operación dio error, contiene el Mensaje de Error, de lo contrario .null.
 - getFileName(): Devuelve el nombre del archivo profile con el cual se esta trabajando.
 
+
 **[⬆ back to top](#table-of-contents)**
+
 
 
 ## Main methods
@@ -63,14 +81,16 @@ git clone https://github.com/raulvfp/profile.git profile
 
 	_Asigna un valor (eValue) en una clave (cKey) de una seccón (cSection) determinada._
 	
+	
 **[⬆ back to top](#table-of-contents)**
+
 
 
 ## Usage:
    ### **.delete()**
    + **Parameters**:
    
-    	. cSection: La Seccion en donde se buscara la clave a borrar.
+     	. cSection: La Seccion en donde se buscara la clave a borrar.
 	
     	. cKey: La Clave que se busca borrar.
         
@@ -98,7 +118,6 @@ git clone https://github.com/raulvfp/profile.git profile
    +  **Return Value**: Si existe, devuelve una cadena, de lo contrario _.null._.
 
    *Example:*
-
 ```
 	loProfile = CREATEOBJECT('profile')
 	IF loProfile.Read('config.ini') THEN
@@ -116,7 +135,6 @@ git clone https://github.com/raulvfp/profile.git profile
    + **Return Value**: Si tuvo exito True, de lo contrario False.
 
    *Example:*
-
 ```
 	loProfile = CREATEOBJECT('profile')
 	IF loProfile.Read('config.ini') THEN
@@ -133,7 +151,6 @@ git clone https://github.com/raulvfp/profile.git profile
    + **Return Value**: Si tuvo exito True, de lo contrario False.
 
    *Example:*
-
 ```
 	loProfile = CREATEOBJECT('profile')
 	IF loProfile.Read('config.ini') THEN
@@ -152,7 +169,6 @@ git clone https://github.com/raulvfp/profile.git profile
    + **Return Value**: Si tuvo exito True, de lo contrario False.
 
    *Example:*
-
 ```
 	loProfile = CREATEOBJECT('profile')
 	IF loProfile.Read('config.ini') THEN
@@ -183,15 +199,35 @@ git clone https://github.com/raulvfp/profile.git profile
 	ENDIF
 ```
 
+
 **[⬆ back to top](#table-of-contents)**
 
 
+
+## Author
+
+* [**Raúl Juárez**](http://rauljrz.github.io/) - *Initial work*
+
 http://rinconfox.com
 
----
+
+## License
+```
+/*
+* ----------------------------------------------------------------------------------------
+* "LA LICENCIA BEER-WARE" (Versión 42):
+* <raul.jrz@gmail.com> escribió este archivo. Siempre y cuando usted mantenga este aviso,
+* puede hacer lo que quiera con esta materia. Si nos encontramos algún día, y usted piensa
+* que esto vale la pena, me puede comprar una cerveza a cambio. Raúl Juárez
+* ----------------------------------------------------------------------------------------
+*/
+```
 
 **Do you like this project? Support it by donating**
 
 - <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/rauljrz"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
 - ![Paypal](https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/paypal.png) Paypal: [Si te sirvio, invitame un café o una cerveza](https://www.paypal.me/rauljrz)
 - ![btc](https://camo.githubusercontent.com/4bc31b03fc4026aa2f14e09c25c09b81e06d5e71/687474703a2f2f7777772e6d6f6e747265616c626974636f696e2e636f6d2f696d672f66617669636f6e2e69636f) Bitcoin:
+
+
+**[⬆ back to top](#table-of-contents)**
